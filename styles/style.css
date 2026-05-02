@@ -1,0 +1,80 @@
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  min-width: 800px; 
+  height: inherit;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: aliceblue;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  z-index: 1;
+  max-width: 739px;
+  margin: 0 auto;
+  color: #000000;
+  font-weight: bold;
+  font-size: 116px;
+  font-style: normal;
+  line-height: 136px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgb(255 255 255/ 0.3);
+}
+
+.title::after {
+  content: "*";
+}
+
+.title:hover {
+  color: #4c4c4c;
+  cursor: default;
+}
+
+.title:hover::before {
+  content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  max-width: 746px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 36px 46px;
+  box-shadow: 0 12px 0 black;
+  color: #000000;
+  font-family: 'Raleway';
+  font-weight: normal;  
+  font-size: 35px;
+  font-style: normal;
+  line-height: 35px;
+  text-transform: initial;
+  background: #FFFFFF;
+
+}
